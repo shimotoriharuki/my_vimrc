@@ -1,4 +1,3 @@
-
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -81,3 +80,43 @@ vnoremap t x
 nnoremap tt dd
 nnoremap T D
 
+" ESCキー2度押しでハイライトの切り替え
+nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
+set whichwrap=b,s,h,l,<,>,[,],~ " カーソルの左右移動で行末から次の行の行頭への移動が可能になる
+
+" jjで編集モードを抜ける
+inoremap <silent> jj <ESC>
+inoremap <silent> っｊ <ESC>
+
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/home/haruki/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('/home/haruki/.cache/dein')
+
+" Let dein manage dein
+" Required:
+call dein#add('/home/haruki/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+" Add or remove your plugins here like this:
+call dein#add('Shougo/neosnippet.vim')
+call dein#add('Shougo/neosnippet-snippets')
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------
