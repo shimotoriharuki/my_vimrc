@@ -122,8 +122,8 @@ call dein#begin(s:dein_base)
 call dein#add(s:dein_src)
 
 " Your plugins go here:
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
+"call dein#add('Shougo/neosnippet.vim')
+"call dein#add('Shougo/neosnippet-snippets')
 
 " Finish Dein initialization (required)
 call dein#end()
